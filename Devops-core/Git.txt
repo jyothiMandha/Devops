@@ -1,0 +1,146 @@
+Version control system
+open source
+
+Centralised repository
+
+GIT Basics
+-----------
+modify--record--revert--compare--manage
+
+speed 
+integrity
+sceurity
+2005 developed
+
+installing and configuring GIT
+------------------------------
+https://git-scm.com/downloads
+
+Git configuration
+------------------
+3 levels
+
+system  --  git config -system
+global  --  git config -global
+command --  git config -local
+
+local orrriveds global , global oveerides system
+
+initial
+----
+git config --global user.name "Jyothi"
+
+git config --global user.email "mandhajyothi48@gmail.com"
+
+git commit -m "initial version"
+
+git config --global color.ui "auto"
+
+git config --list
+
+these configurations stored in users--.gitconfig folder
+
+Getting started with Git
+------------------------
+
+create a git repository
+
+create an empty directory --mkdir jyothi
+
+convert the directory into repo -- git init (creates a hidden directory)
+
+run git status
+
+ls -lrt -- to list the files
+
+pwd
+
+three stage workflow
+----------------------
+
+working directory to staging area
+
+git add
+
+git commit -m "message"
+
+to modify files
+-----------------
+git log
+
+git log --oneliner
+
+Tracking changes
+-----------------
+tracking is the ability to identify changes between the different versions of the same file, spread across various repoistories
+
+working directory ---->git add ----staging area  ----->git commit  -----Local Repository
+
+workdir ---git diff -- staging area
+staging area --git diff --staged --local repo
+
+git diff --staged  ==  git diff --stageed HEAD
+
+Revert the commits
+-------------------
+$git log -- list details of the commit associated with afile
+git checkout  --stage the file
+git status --share the command to unstage the file
+git reset--remove file from staging area
+
+Deleting files from staging Area and working directory
+---------------
+git rm filename  -- deletes the file from staging area and working directory
+git rm --cached filename
+git status	
+
+git rm --cached b.txt
+
+ignoring files in git
+------------------------
+
+echo "mofify a.txt"  >> a.txtecho
+
+rename
+-------
+
+.git/indexfile
+
+
+Which of the following would result in a file being "untracked" in Git?
+
+A: a file being added to working directory
+
+Which of the following is correct about the "staging area?
+
+A:consists of all files to be considered for the next commit. All files have to be staged before commit
+
+Which of the following statements is correct about the git directory content?
+
+A:It contains all metadata that Git needs to function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+When file storage is made accessible to multiple compute systems, it is known as a shared file system. File storage is created using an operating system that formats and manages the reading and writing of data to the individual blocks of an underlying storage device. 
+
+
+Shared file storage is most commonly used when you have data that you want to share with a select number of compute systems that will all need both read and write access to the data. For example, if you have several monthly reports that must be accessed and updated by many of your Amazon EC2 instances, you can use Amazon EFS to create shared file storage for these monthly reports.  Similarly, if you have multiple image files that need to be accessed and updated by many individual AWS Lambda functions for Machine Learning, Amazon EFS provides an optimal shared storage solution.  
+
+
+Data is stored in files, the files are stored in directories, and the directories are stored in volumes, then mounted by clients. 
+
+--In on-premises architectures, shared file storage systems are typically called network attached storage (NAS).
+
+File storage services
+----------------------
+amazon EFS
+Amazon FSx for Lustre
+Amazon FSx for windows file server
+Amazon FSxfor Netapp ONTAP
+Amazon FSx for OpenZFS
+
+File storage Performance
+-------------------------
+
+Latency
+  Latency is measured as the amount of time between making a request to the storage system and receiving the response. Latency is also often referred to as delay.
+  
+IOPS
+
+ Input/output operations per second (IOPS) is a statistical storage measurement of the number of input/output (I/O) operations that can be performed per second.
+ 
+Throughput
+
+ Throughput is a statistical storage measurement used to measure the performance associated with reading and writing large sequential data files.
+ 
+ 
+Fully managed
+--------------
+Amazon EFS is serverless, so you don’t need to provision or manage any infrastructure or capacity. 
+
+It offers a 99.99% availability service-level agreement (SLA) and is designed for 11 nines of data durability.

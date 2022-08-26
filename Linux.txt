@@ -1,0 +1,52 @@
+1969--developed C and unix Os
+
+1970--Unix --open source
+
+1980--started their own Unix --Ibm, solaries, hp
+
+mid 1980--GNU Project 
+gnu--os
+free Os
+
+1990--Linus Torvalds 
+Linux+GNU
+
+Linux is based on Unix OS
+
+Various Linux Distributions
+-----------------------------
+Red hat enterprise--most used, free version --sentos
+
+fedora --foundation of commercial RHEL
+Debain
+Others --Ubuntu, Liux, Mint,CentOs
+
+Linux features
+----------------
+
+simplified updates for all installed s/w
+Free Software Licensing
+Access to source Code
+multiple distributions
+better malware protection
+
+Different Shells in Linux
+---------------------------
+kernal: allocate the system resources / heart of Os
+
+shell:
+shell converts to as for kernal
+
+Evaluation of shell:
+
+1989--bash
+
+
+shell  vs Bash
+
+Posex standards
+
+c shell: Ideal for learners 
+Korn shell: used for administartion languages
+Bourne Shell:scripting and interfcae
+

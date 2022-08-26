@@ -1,0 +1,69 @@
+s3
+--
+object based storgae
+Manage data as object
+s3-object -- key, value. version id, metadata
+storage o bytes to 5 tera bytes
+
+s3-bucket
+---------
+bucket name must be unique
+stores in folders
+
+S3-storage clases
+------------------
+standard
+intelligent tiering
+Standrad _IA
+one zone Ia
+Glacier
+Glacier deep archive --cheap storage
+
+s3-security
+------------
+all buckets are private when they craeted
+Bucket policies
+Access Control Lists(ACL)
+
+s3-encryption
+-------------
+ssl/tsl
+
+server side encryption
+SSE-aes
+SSE-kms --aws and you manage key
+SSC-c --customer provided key
+Client side encryption
+
+S3-data consistency
+--------------------
+
+s3-cross region replication
+---------------------------
+
+s3- versioning
+---------------
+allows u to version your objects
+
+once enabled we cannot delete, only suspended on the bucket
+
+s3-life cycle management
+-------------------------
+
+automate the process of moving the objects
+
+s3-transfer accerlerstion
+------------------------
+fast and secure transfer of files over long distances b/w your end users and an s3-bucket
+
+
+S3-presigned URLs
+------------------
+aws cli/aws sdk used to generate yrls
+
+
+S3-MFA delete
+--------------
+turn on MFA
+Turn on versioning
+

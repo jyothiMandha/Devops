@@ -1,0 +1,266 @@
+Amazon Elastic Block Store (Amazon EBS) is an easy-to-use, high-performance, block storage service designed for use with Amazon Elastic Compute Cloud (Amazon EC2) for both throughput and transaction intensive workloads at any scale
+
+relational and nonrelational databases
+
+Amazon EBS volumes are replicated within an Availability Zone and can easily scale to petabytes of data
+
+Amazon EBS volumes and snapshots
+
+three primary types of storage: block, file, and object.
+
+
+Block Storage Overview
+-----------------------
+Block storage is raw storage in which the hardware storage device or drive is presented, as either disk or volume, to be formatted and attached to the compute system for use.
+
+Storage devices can be hard disk drives (HDDs),(SSDs),(NVMe). (SAN) 
+
+In cases where the application manages the block storage, the application often shares management with an operating system.
+
+Block storage is relatively fast compared to most file and object storage systems and services.
+
+
+Block size
+----------
+The operating system must first format the block storage
+
+Metadata management
+--------------------
+Metadata also contains information about the data owner and access permissions: who owns the data and who can read or modify the data.
+
+read write activity
+--------------------
+Often the operating system uses metadata permissions to control who can access, modify, or delete the data.
+
+Lightweight Directory Access Protocol (LDAP) to determine these permissions.
+
+Locking control
+----------------
+The operating system also manages data integrity when data is being modified or deleted. 
+
+Latency
+-------
+Iops(i/p o/p operations per second)
+------------------------
+throughtput
+-----------
+
+AWS block storage portfolio
+----------------------------
+
+The AWS block storage portfolio consists of two types of block storage services
+
+instance storage
+-----------------
+Instance storage is temporary block-level storage attached to host hardware that is ideal for storing information that frequently changes or is replicated across multiple instances.
+
+amazon EBS Storage
+-------------------
+Amazon EBS is a block storage service designed for use with Amazon EC2.  Amazon EBS scales to support virtually any workload and any volume size.
+
+Snapshots
+----------
+Snapshots are incremental, point-in-time copies of your data stored on your EBS volumes. You can use snapshots to restore new volumes, expand the size of a volume, or move volumes across Availability Zones. 
+
+
+2.File Storage Overview
+------------------------
+File storage is built on top of block storage, typically serving as a file share or file server.
+
+The name file storage comes from the primary use of storing data as files typically in a directory tree hierarchy
+
+storage protocols for file storage are Server Message Block (SMB) and Network File System (NFS), which are network protocols that enable users to communicate with remote computers and servers.
+
+Object Storage Overview
+------------------------
+Object storage is also built on top of block storage. Object storage is created using an operating system that formats and manages the reading and writing of data to the block storage devices.
+
+The name object storage comes from the primary use of storing the data within a binary object
+
+Object storage is recognized for its inherent availability of the file objects. Some systems support file versioning, file tracking, and file retention.
+
+
+Features and Benifits
+-----------------------
+Performance for any work load
+Easy to Use
+High reliability
+virtually unlimited scale
+Secure
+Cost-effective
+
+Persistance
+------------
+mazon EBS volumes are durable and persistent by default. Your EBS volume survives even if your EC2 instance is terminated. Your data is preserved for your future use and persists until you decide to delete it. 
+
+Built-in-encryption
+--------------------
+Amazon EBS encryption offers seamless encryption of EBS data volumes, boot volumes, and snapshots, eliminating the need to build and manage a secure key management infrastructure
+
+High availability and high durability
+--------------------------------------
+EBS volumes are designed to be highly available, reliable, and durable at no additional charge to you. EBS volume data is replicated across multiple servers in an Availability Zone to prevent the loss of data from the failure of any single component. 
+
+Multiple volume type options
+-----------------------------
+Amazon EBS provides multiple volume types that allow you to optimize storage performance and cost for a broad range of applications.
+
+
+ssd-based volumes
+hdd based volumes
+
+Elastic Volumes
+----------------
+Elastic Volumes is a feature that allows you to easily adapt your volumes as the needs of your applications change. The Elastic Volumes feature allows you to dynamically increase capacity, tune performance, and change the type of any new or existing current generation volume with no downtime or performance impact. 
+
+Multi attach
+------------
+Multi-attach allows a single EBS volume to be concurrently attached to up to 16 Nitro-based EC2 instances within the same Availability Zone.
+
+Volume monitoring
+------------------
+Performance metrics, such as bandwidth, throughput, latency, and average queue length, are available through the AWS Management Console
+
+snapshots
+---------
+EBS snapshots are stored incrementally. Only the blocks that have changed after your last snapshot are saved, and you are billed only for the changed block
+
+Backups
+-------
+AWS Backup supports backing up your EBS volumes. AWS Backup allows you to centralize and automate data protection across AWS services
+
+
+
+USECASES
+-----------
+
+Instance stores
+–
+Instance stores are not the same as EBS volumes. Instance stores are ephemeral and are directly associated to an EC2 instance. An instance store provides temporary block-level storage for your EC2 instance. 
+data in the instance store is lost when EC2 instance stops.
+
+
+
+EBS volume  types
+------------------
+genral purpose SSD
+
+  General Purpose SSD-backed volumes provide a balance of price and performance. AWS recommends these for most workloads. The current General Purpose SSD offering includes gp2 and gp3 volume types.
+  
+IOPS SSD
+
+  Provisioned IOPS SSD-backed volumes provide high performance for mission-critical, low-latency, or high-throughput workloads.
+  
+  AWS recommends these for most of your demanding workloads.
+  
+through put optimized hdd
+
+  The HDD-backed volumes that Amazon EBS provides fall into two categories: st1 Throughput Optimized HDD volumes and sc1 Cold HDD volumes.
+cold hdd
+
+  Cold HDD provides the lowest-cost HDD design for less frequently accessed workloads. Use cases include throughput-oriented storage for data that is infrequently accessed and scenarios where the lowest storage cost is important.
+  
+magnetic
+ 
+ Magnetic is a previous-generation EBS volume type that is still in use in some customer production environments and available on AWS Management Console. AWS recommends General Purpose SSD gp3 volumes for new workloads. 
+ 
+AWS Compute Optimizer
+----------------------
+go to services
+managements and governece
+aws compute optimizer
+recoomendation for ebs volumes
+choose not optimized
+
+
+EBS Volume Pricing
+-------------------
+Your costs are calculated based on the provisioned amounts. Pricing rates are quoted based on a per gigabyte (GB) per month for volumes, IOPS per month for provisioned IOPS, and MB/s per month for provisioned throughput
+
+AWS Pricing calculator
+-----------------------
+The AWS pricing calculator provides a simple method to estimate your EBS volume costs. You can configure any current EBS volume type using the pricing calculator. 
+
+
+SCENARIO: NEW APPLICATION BUDGET ESTIMATE
+
+You need to provide budgeting for a new application. For this application, you have determined that you need one General Purpose SSD gp3 volume and one Throughput Optimized HDD st1 volume. The application is intended for long-term use.
+
+gp3 volume requirements include 3,000 IOPS of sustained performance, 75 GB of volume space, and daily snapshots. Your daily rate of change is 1 GB.
+
+st1 volume requirements include 40 MB/s of sustained throughput, 500 GB of volume space, and hourly snapshots. The calculated volume size to meet the sustained performance requirements is 1 TB. Your hourly rate of change is 1 GB.
+
+Pricing is compared based on a full month of use. You use the default Average duration for each instance as 730 hours per month.
+
+What is the total cost estimate for the new application?
+
+  Estimated gp3 volume costs
+–
+Estimated gp3 volume costs = $10.50
+
+1 instances x 730 instance hours = 730.00 total instance hours
+730.00 instance hours / 730 hours in a month = 1.00 instance months
+75 GB x 1.00 instance months x 0.08 USD = 6.00 USD (EBS Storage Cost)
+EBS Storage Cost: 6.00 USD
+3,000 iops - 3000 GP3 iops free = 0.00 billable gp3 iops
+125 MBps - 125 GP3 MBps free = 0.00 billable MBps
+Total snapshots: 30
+Initial snapshot cost: 75 GB x 0.0500000000 = 3.75 USD
+Monthly cost of each snapshot: 1 GB x 0.0500000000 USD = 0.05 USD
+Discount for partial storage month: 0.05 USD x 50% = 0.025 USD
+Incremental snapshot cost: 0.025 USD x 30 = 0.75 USD
+Total snapshot cost: 3.75 USD + 0.75 USD = 4.5 USD
+4.50 USD x 1.00 instance months = 4.50 USD (total EBS snapshot cost)
+6.00 USD + 4.50 USD = 10.50 USD (Total EBS cost)
+Amazon Elastic Block Storage (EBS) total cost (monthly): 10.50 USD
+
+  Estimated st1 volume costs
+–
+Estimated st1 volume costs = $115.50
+
+Unit conversions
+
+Storage amount: 1 TB x 1024 GB in a TB = 1024 GB
+Pricing calculations
+
+1 instances x 730 instance hours = 730.00 total instance hours
+730.00 instance hours / 730 hours in a month = 1.00 instance months
+1,024 GB x 1.00 instance months x 0.045 USD = 46.08 USD (EBS Storage Cost)
+EBS Storage Cost: 46.08 USD
+Total snapshots: 729
+Initial snapshot cost: 1024 GB x 0.0500000000 = 51.2 USD
+Monthly cost of each snapshot: 1 GB x 0.0500000000 USD = 0.05 USD
+Discount for partial storage month: 0.05 USD x 50% = 0.025 USD
+Incremental snapshot cost: 0.025 USD x 729 = 18.225 USD
+Total snapshot cost: 51.2 USD + 18.225 USD = 69.425 USD
+69.425 USD x 1.00 instance months = 69.42 USD (total EBS snapshot cost)
+46.08 USD + 69.42 USD = 115.50 USD (Total EBS cost)
+Amazon Elastic Block Storage (EBS) total cost (monthly): 115.50 USD
+
+
+AWS Backup vs. EBS snapshots
+
+AWS Backup extends your data backup beyond the Amazon EBS service. Amazon EBS Snapshots functions within the Amazon EBS service. Both AWS Backup and Amazon EBS Snapshots store the data backups of your EBS volume in a AWS managed Amazon S3 bucket. 
+
+AWS Backup offers a more robust backup solution when compared to EBS Snapshots. With AWS Backup, you have additional features to meet your organizational requirements. Amazon EBS Snapshots service is tightly integrated with Amazon EC2 and Amazon EBS services. AWS Backup, however, operates as a separate service. 
+
+Amazon CloudWatch
+--------------------
+
+Amazon CloudWatch metrics are statistical data that you can use to view, analyze, and set alarms on the operational behavior of your volumes.
+
+Data is available automatically in 1-minute periods at no charge.
+
+--track application performance
+collect and monitor log files
+get notified when an alarm goes offering
+
+
+Metricks
+Alarms
+Events
+
+
+send SNS notifications
+
+

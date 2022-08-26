@@ -1,0 +1,259 @@
+Kubernetes
+-----------
+how to deploy, use, maintain in cluster
+
+Origin of k8
+-------------
+traditional deplymnt
+
+diff applictn running on same server
+it takes all resources for 1 applictn
+
+VM intoduced
+virtualization deploymnt
+
+high cost
+security tisk
+availability issue
+Limitations and restictions
+Time consuming
+
+deiff b/w k8 qnd vm
+--------------------
+
+vm --not secured
+not easily portable
+time is more
+less isolation
+wait time is more
+
+
+k8--secured
+portable
+time is less
+better isolation shares os among the resources
+saves much time
+
+
+what is k8
+-----------
+open source
+use to maintaining and deploying a group of containers
+k8+docker
+google initially developed k9
+201 to run on cloud architecure made covinent
+
+Benifits
+---------
+9-key
+
+portable 100%
+workload scalability
+high availability
+design for deployment
+service discovery and LoadBal
+Storage Orchestration(ssd)
+self healing --some thing fails restart the process
+automated rollout and rollback
+Automatic bin packing
+
+Installation
+-------------
+sudo apt get update
+enter password
+sudo apt-get install -y apt-transport-https
+sudo apt install docker.io
+yes
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo apt-get install curl
+sudo curl -s  key.. sudo aot-key add
+sudo chmode 777/etc/apt/resources.list.d/
+sudo apt-get update
+
+kubernetes components
+--
+sudo apt-get install -y kubelet kubeadm kubectl kubernetes-cni
+
+sudo swapoff -add 
+sudo kubedem initi
+
+start cluster 
+
+sudo kubectl apply -f xxxx.yaml
+sudo kubectl get pods
+
+
+K8 terminologies
+-----------------
+6 terminologies
+
+cluster -- set of vm(physcl/virtual)
+
+Node-- they are worker machines that run containerized applications  
+
+Pod-- it is a groupof containers that are deployed together on the same host
+
+replication contollers-- it is used to definr pod lifecycles, rather than to create pods directly
+
+Selector--expression matches lables to filter specific resources
+
+Labels--they are key-value pairs, that are attached to objects
+
+replication sets --they define how many replicas of each pod will running
+
+Annotation--it is a label with much larger data capacity
+
+Name--a name by resource is identified
+
+Volume--directory with data which is accessible to a containerized
+
+NAmespace--provides additinal qualifictn to a resource name
+
+Service==abstarction on top of pods, provides single ip address abd DNS name by which pods are accessed
+
+Architecture
+------------
+master 
+ cluster store(etcd) --ram,cpu,disk
+ controller --server gathering/sending info to api-server
+ Scheduler --assign tasks to slave nodes
+ API-server --entry point for rest coomands
+ 
+slave
+Node 
+  3-tcomponents
+  docker 
+  kubelet
+  k8 proxy
+Pods
+
+
+Need of containers
+-------------------
+we cannot accept downtime
+
+Docker swarm vs k8
+------------------
+
+docker swarm
+-------
+no auto scaling
+auto load balancing
+easy and fast
+cluster strength is weak
+shares storage volumes with any  other containers
+GUI-not available
+
+kubernetes
+------------
+auto scaling
+manuallu configures load balancing
+long and time consuming
+cluster strength is strong
+shares storage volumes with multiple containers inside the same pod
+GUIavailable
+
+Hardware components
+---------------------
+node
+cluster --ram 500gb
+persistent volumes
+
+software components
+----------------
+container --linux package
+Pods
+the deploymnt
+ingress --for security
+
+K8 Demo
+--------
+sudo apt-get update
+sudo apt-get install -y apt-transport-https
+sudo apt install docker.io
+sydo systemctl start docker
+sudo systemctl enable docker
+sido curl -s https://packages.cloud.ggogle.com/apt/doc/apt-key.gpg
+chmod 777 /etc/apt/sources.list.d/
+Cat /etc/apt/sources.list.d/kubernetes.list
+sudo apt-get install -y kubelet kubeadm kubectl kubernetes-cni
+
+sudo kubedm init
+
+subo kubectl apply -f https://raw.github.....yaml
+
+mkdir -p $HOME/.kubeadm
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/con
+
+sudo kubectl get pods -all-namespaces
+
+sudo kubectl get nodes
+
+sudo kubectl run --image=nginx nginx-app --port=80 --env="DOMAIN=cluster"
+
+sudo kubectl expose deployment nginx-app --port=80 --name=nginx-https
+
+sudo docker ps -abd
+
+
+what are orchestration tools
+------------------------
+orch tools are a set of commands used to deploy and connect an application. these tools focus on the process and not their outcome
+
+KOPs--k8 operations
+--------------------
+https://github.com/rchidana/Kubernetes/blob/master/simplilearn-kops-setup.MD
+
+login aws account
+
+launch ec2
+
+open security grops in EC2
+
+
+MobaXterm
+
+Craete IAM role for EC@ instance
+
+abdec2--actions--replace Iam role
+
+sudo yum update-y
+
+install kops
+
+chmod 
+
+
+install kubectl
+
+aws route53
+
+interview qusns
+----------------
+1..why k8 popular --open source, great community support, robost conainer deployment, effective persistent storage,multi-cloud suppor, container health monitoring
+
+2..diff b/w k8 and docker ---k8 deployment in pods, deplymtns and services   where as docker --deployment in services
+health check--  k8--readiness and liveness , docker--N/A
+
+fault tolerence--- k8--high, docker --low
+
+3..features of k8
+container balancing
+storage orchestration
+open-sourcescaling
+servicesself-monitoring
+
+
+4..
+
+
+
+
+
+
+
+
+
+
+

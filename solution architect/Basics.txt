@@ -1,0 +1,219 @@
+Aws compute
+------------
+EC2--webservce
+EC2autoscale --increase or decrease no.of instances
+ELb--distribute incoming traffic
+ECS--run applications on managed cluster
+EKS--run kubernetes applications on aws
+Lambda--run code in response to events
+
+Benifits of EC2
+---------------
+Elasticity
+Complte control to customers
+Flexbility to customers
+Integrated to many services
+reliable
+secure
+Cost-effective
+easy to start
+
+Instance types(EC2)
+--------------------
+general purpose
+
+  mac. a,
+compute optimised --high perform process
+Memory optimized
+Accelerated computing
+Strorage optimized
+
+
+Amazon machine images (ami)
+----------------------
+hardware for ec2
+
+Auto scaling
+------------
+automatically adjust the resources
+
+
+ELb
+---
+Application load balncer
+network L B 
+Gateway L balncer
+
+Strorage services
+-----------------
+Amazon S3 -stroed and retrieved
+ 
+ object stroage
+ 99.999999999% durability and 99.99% availability
+ 
+ Uses:
+ Data lakes
+ Backup and storageApplication hosting
+ Media hosting
+ Software delivery
+ 
+ types
+ -----
+ s3-standard
+ s3-standard_Infrequenct access
+ S3-onezone-IA --stores data in one zone
+ s3-glacier
+ 
+ 
+Ebs --harddrive for ec2, persistance block level stroage
+s3-glacier -- data archiving and backup
+aws storage gateway---Integrated cloud stroage--large data
+EFS--file system
+Amazon FSx--file strorage widely used dile system
+
+AWS Database Services
+-----------------------
+Amazon RDS --cost effective and resizable capacity
+Amazon DynamoDb --fast and predictable performance
+Amazon elastic cache --fast managed information retrieval
+
+
+AWS databse services               database on EC2
+easy to setup manage maintain
+more control/flexible
+
+
+Networking
+-----------
+VPC --build virtual network
+   
+Security groups --instance level
+network access control(ACL) --subnet level
+Route 53
+
+AWS security
+-------------
+
+
+
+Introduction to AWS Solutions
+------------------
+ML
+Analytics and Data
+IOT
+Serverless computing
+Containers
+Enterprise applicationsStorage
+Windows workloads
+
+
+migration Approches
+-------------------------
+7R's
+
+Rehost -- lift and shift
+  on premises to aws 
+  automating with tools
+  eaiser to optimized and re-architect
+  
+
+relocate --migration specific to Vmware cloud on aws
+
+replatform --retaining the core architecture
+  ex:migrating data to RDS
+  
+refactor --re-imaging how the applctn is architected and developed
+
+Retire--shutting of non-useful
+
+Retain/Revisit--keeping certain applictn on-premisis
+
+Repurchase--moving to saas
+
+
+AWS cloud adoption framework
+-----------------------------
+migrating to the cloud is a process
+CAF provides smooth migration to Aws
+
+
+Poc--proof of concept
+
+
+Datalakes
+---------
+Amazon athena
+amazon EMR
+Amazon redshift
+Amazon kinesis
+Amazon opensearch services
+Amazon quickSight
+Amazon Lake formation
+
+
+
+IAM
+------
+polocies
+Managed 
+Inline
+
+IAM Ploicy structure
+---------------------
+statement
+version
+effect
+action
+resources
+sid
+notAction
+NotResource
+Condition
+
+ARN--amazon resource name
+--------------
+
+Aws Organisations
+------------------
+policy based management
+group based account management
+consolidated billing
+
+it is browser based console
+
+
+Amazon CloudFront
+------------------
+global infrastures
+
+is a content delivery network (CDN)
+deep integration with key services
+
+simple to create
+
+create distribution
+
+Ec2 instance
+-------------
+elastic comput cloud
+
+pay as u go
+broad selection of h/w and s/w
+global hosting
+
+Login to aws console
+choose region
+launch ec2
+select AMI
+choose h/w selection (instance types)
+configure instance details
+add storage
+add tags
+add security group
+
+
+security groups
+----------------
+
+firewall for each ec2
+deny all incoming traffic initially

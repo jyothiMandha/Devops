@@ -1,0 +1,333 @@
+jenkins
+------
+open source automation server
+supports ci/cd
+runs in serverless container apache tomcat
+
+system requ
+-------------
+s/w
+chrome
+
+h/w
+linux
+
+Intro to devops
+----------------
+developer
+---
+plan
+code
+build
+test
+
+Integrate(++)
+
+
+operation
+-----------
+deploy --chef
+operate --puppet,ansible
+Monitor --Nagios, splunk
+
+Waterfall Model
+----------------
+Requirements--accept the client requ
+Project plan
+Application development
+Testing
+Application delivered to client
+New requrement start process again
+
+traditional approach
+development happens in step by step manner
+
+Agile Model
+------------
+entire building a software broken down into small actionable blovks called Sprints
+
+plan
+code
+test 
+review
+
+Product backlog
+sprint planning
+sprint backlogdaily scrum(plan, code, test, review)
+deliverable product
+Product review
+
+adv
+----
+client req are better understand
+Product delivery is much faster
+
+dis
+---
+product tested only after developers completes
+devlpers sends to operations and operations end to product server
+
+Devops
+-------
+client+requirements
+Development+Testing
+operations+Infrastructre
+
+Processes
+-----------
+Continuous integration
+--------------------
+build
+test
+merge
+
+provides a shared integrated place to all the people from build and test environemnt
+
+that enables the developers to merge code changes to central repository
+
+avoids murge conflicts
+decrease code review
+speeds up development process
+reduces product backlog
+
+
+
+continuous delivery
+------------------
+automatic releases to repository
+
+refers to building testing and develiering improvements to the software code
+
+For Higher quality products
+customer are more satisfied
+more efficiency and cost effectiveness 
+
+
+contimuous deployment
+----------------------
+deploy to production
+
+final stage in the pipeline, refers to the automatic releasing of any developer changes from the repository to the production
+
+--faster developments of products
+less risky releases and easy to fix problems
+continuous improvement in quality
+
+
+jenkins pipeline
+-----------------
+open source automation server written in java
+it is a web application also
+Plugins,Tools is a power to choose for CI
+
+Jenkins -- 2.0 features
+-------------
+new project
+
+free style
+
+echo "first Job : Triggered at : %date% : %time%"
+
+configue
+Postbuild action --build other project --2nd job build
+
+Manage plugins
+
+Delievry pipeline plugins
+
+visualization
+
+view name
+
+we can trigger multiple jobs
+
+groovy scripts
+---------------
+
+2.107 scripting pipelines
+
+pipeline {
+ agent any
+ stages {
+   stage { 'compile '} {
+      steps {
+	          echo "completed successfully";
+			  }
+			
+		
+		
+			
+    stage { Junit'} {
+	  steps {
+	         echo "JUnit Passed"
+			 }
+		}
+		
+	stage{ 'Deploy'} {
+	   steps { 
+	     echo "pass";
+		 }
+	}
+	post {
+	 always {
+	   echo 'this will run always'
+	   }
+	   
+	  ..
+	  ..
+	  
+	 }
+	}
+	
+agent
+-----
+
+types of pipelines
+--------------------
+
+scripted (2.0)
+declarative 
+
+
+Parallel scripting
+-------------------
+
+
+CI/CD pipeline
+---------------
+pipeline is a series of events together to make quick software releases
+
+ci
+---
+integrates the code to into a shared repository
+early detection of problems
+doesnot remove the bugs, but helps to identify it quickly
+
+cd
+--
+*it is the changes made in code before deployment
+deployed to the customer when required
+goal is to make deployments
+
+cd/ci with jenkins
+---------------------
+6-steps needed
+
+jdk  
+basic Linux coomands
+
+------------------------------------
+1.(https://www.jenkins.io/downloads) install jenkins
+
+2.execute jenkins as a java binary
+
+open cmd, type 
+java -jar ./Jenkins.war
+
+3.in browser open localhost:8080
+jenkins dashboard opens, create new jobs
+
+4.create a pipeline job
+
+5.configure and execute pipeline job with a direct scripted
+
+6.configure and execute pipeline job with scm
+
+Jenkins installation
+----------------------
+web application written in java can be run/installed 3ways
+
+
+manage jenkins
+
+configure system
+SMTP server
+
+Global tool configuration
+add java git and so only
+
+configure global security
+LDAP and so only
+
+create new job
+----------------
+create new job
+freestyle
+
+build periodically
+
+
+
+
+
+
+
+
+
+
+
+Master -slave architecture in jenkins
+--------------------------------------
+clone code from git and distribute
+
+jenkins file
+------------
+text file
+allows code review in pipeline
+
+java-jar jenkins.war
+
+define dependency in maven -- pom.xml
+
+2 types of pipelines
+
+scripteed -- groovy
+declarative ---agent any
+
+backup copy in jenkins -- jenkins_home 
+
+
+how to copy from old server to new server
+--move a job from one installation of jenkins to another by copying corresponding job directory
+
+by changing the name (rename)
+
+security ---LDAP, inetrnal DB, employ authentication
+
+deply a custom build of a core plugins
+--------------
+
+copy the .hpi file to $JENKINS_HOME/plugins
+remove the plugins development directory
+create empty file called <plugin>.hpi.pinned
+Restart Jenkins and use custom build of core plugin
+
+to stop security --config.xml
+useSecurity = false
+and restart jenkins
+
+build schedule
+--------------
+SCM coomits code
+After complition of other builds
+Run at specific time
+manual build
+
+restart jenkins
+---------------
+forced- -(Jenkins_url)/restart
+safe -- (Jenkins_url)/saferestart
+
+
+
+
+
+
+		
+		
+
+
+
+
+
+
