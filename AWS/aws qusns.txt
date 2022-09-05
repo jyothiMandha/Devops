@@ -1,0 +1,10 @@
+1.EC2 instances attached to EBS volumes
+
+2.which of the following network can be used to host EC2 resource in AWS cloud
+Ans: aws vpc
+
+3.your company is planning to host resources in aws cloud. they want to use services decouple?
+
+ aws sqs
+
+4.

@@ -1,0 +1,264 @@
+Account ID
+
+544952168760
+Account Alias
+544952168760 Create
+Sign-in URL for IAM users in this account
+
+https://544952168760.signin.aws.amazon.com/console
+
+
+IAM user
+--------
+
+https://544952168760.signin.aws.amazon.com/console
+
+username:Jyothi_dev
+password: Jyothi@9177
+
+
+2. https://544952168760.signin.aws.amazon.com/console
+un:laddudev
+pwd:Jyothi@91774
+
+
+root has complete access to everything
+ not to use root user for day to day activities
+ we can create a IAM user and lock our credentials
+ 
+create IAM User
+----------------
+Iam is used to create users and assign them to groups
+  first create a IAM group give the name and give the permisions(adminstrative) to that group
+  then create a user(Jyothi_dev) add the user into that group and give the permissions to that user
+then login with Iam user
+
+Regions and Zones
+------------------
+
+ why we need regions and zones?
+ 
+your application deplyed in london
+ challenges:
+ high latency accessing from far regions
+ data centere crash 
+ 
+Lets add one more data centre
+ challenge: latency for other datacentres
+ 
+
+
+AWS provides 20+regions around the world
+
+ADV:
+----
+
+regions
+-------
+Low latency
+global footprint
+adhere to govt regulations
+High availability
+
+Availability zones
+------------------
+regions may have multiple,isolated physically seperated availability zones
+increasse availability and fault tolerenace
+
+
+examples:
+---------
+us-east-1   --6 vailability zones(us-east-1b..)
+europe(london)  --3
+
+
+EC2(Elastic compute cloud)
+--------------------------
+rent virtual servers --EC2
+EC2 service: provision EC2 instance
+
+features of Ec2:
+----------------
+ Ec2 instances
+ Ebs
+ Elb(load balencer)
+ network connectyivity
+ 
+connect SSH to Ec2: demo
+ ec2
+ running instaneces
+ Launch instance
+1.Amazon machine image:(containing the Os, application server)
+amazon linux2
+
+2.choose the instance type(hardware, cpu , memoery, networking capacity)
+ general purpose(12micro) (1cpu 1gib memory)
+ 
+ click launch
+ Select key pair(public by aws private with Us)
+  create a new keypair
+  ec2-defaulut
+  
+after connceting to ec2
+execute the following
+whoami
+python --version
+
+to install anything we want to become a root user
+   sudo sudo
+   yum update -y  //for updating softwares
+   yum install httpd //to install webserver on EC2 instance
+   systemctl start httpd  //start the webserver
+   systemctl enable httpd
+   
+   security
+   ----------
+   enable security by going to inbound security add HTTP there  --upadte
+   
+   echo "Hello world" > /var/www/html/index.html
+   
+ 
+ EC2 concepts-AMI _amazon machine image
+ ----------------------------------------
+ 
+which os you are going to use on the instance
+
+3-sources
+Provided by aws
+from aws market place
+customized ami
+
+Ec2 --instance Family
+----------------------
+
+after choosing image going to instance type
+
+why instance family?
+
+optimized combination of (cpu,gpu,memory,disk) and networkig for specific workloads
+
+270+ instances across 40+types for diff wrkloads
+m(m4,m5,m6) --general purpose
+c--compute optimized
+r-memory optimized
+i-storage optimized
+g-gpu optimized
+
+security groups
+----------------
+virtual firewall based on conditions control traffic coming inside/outside of ec2 instance
+rules
+-----
+inboun/outbound
+
+default --no rules --no traffic is allowed
+we can configure only allowed rules
+
+keypairs
+--------
+provide security to EC2 instance
+private key is required to connect
+public stored by AWS
+
+EC2 Ip addresses
+-----------------
+
+public ip -- internet addressable --each is diff
+private ip-- internal corporate n/w --each may be same/diff
+All EC2 instances are assigned private ip adddresses
+if we stop Ec2--public ip will be lost
+
+Elastic IP addresses
+---------------------
+to Get contact public ip addressable
+
+elastic ip remains attached even if you stop instance. you need to detach it manually
+
+elastic ip can be switched to another ec2 instance within the same regions
+
+remember:
+you are charged for elastic ip when you are not using it after assiging it.
+
+
+IAAS
+-----
+
+use only infrastructure from cloud provider
+called as lift and shift
+
+ex:Ec2 to deploy to our applications
+ec2 to create database
+
+PAAS
+----
+responsible for only the application
+
+
+Elastic load balancer
+----------------------
+distributing the traffic across multiple targets
+managed service
+auto scale to handle the loads
+ELB public or private
+health checks
+
+demo:
+first create 2 ec2 instances
+create a target group and add that ec2 instances to that
+create load balncer eith that target group
+
+three types:
+classic---older version not recommended by aws
+application LB(layer7)--widely used(http/https) --request and response type
+network LB(layer 4):at netword level(tcp/tls and udp)  used for very high performance
+
+aws elastic beanstalk--run and manage web apps
+amazon rds
+-----------
+relational db:mysql,oracle , sql server
+
+
+Availability
+-------------
+application are available when the user need
+
+availabilty table
+------------------
+99.95     downtime(22min) in month
+99.99     4 and half min
+99.999(five 9)  26sec
+
+deploy to muto]iple AZ
+deploy to multiple Regions
+
+
+scalability
+-----------
+Load is expected to increase 
+ability to adapt the changes in demand
+ deploy the bigger instsnce with bigger Cpu and memoryincrease the bo.of application instances abd setup a load balancer
+
+ vertical scaling
+ ----------------
+ deploy database to bigger instance
+ there are limits to vertical scaling
+ increasing EC2 instance size
+ 
+ horizontal scaling
+ -------------------
+ deploy multiple instances of application/database
+ increases availabity
+ needs additional infrastructure
+ Auto scaling group is needed
+ distribute load --ELB needed
+
+EC2 Tenancy(Shared vs Dedicated)
+---------------------------------
+
+
+ 
+   
+ 
+
+ 
+ 

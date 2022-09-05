@@ -1,0 +1,72 @@
+Kubernetes is a container management technology developed in Google lab
+It is an open source system which helps in creating and managing containerization of application
+hosted by Cloud Native Computing Foundation (CNCF).
+This is also known as the enhanced version of Borg
+Kubernetes comes with a capability of automating deployment, scaling of application, and operations of application containers across clusters. It is capable of creating container centric infrastructure.
+
+Features of Kubernetes
+------------------------
+
+Continues development, integration and deployment
+
+Containerized infrastructure
+
+Application-centric management
+
+Auto-scalable infrastructure
+
+Environment consistency across development testing and production
+
+Loosely coupled infrastructure, where each component can act as a separate unit
+
+Higher density of resource utilization
+
+Predictable infrastructure which is going to be created
+
+>>>>it can run application on clusters of physical and virtual machine infrastructure. It also has the capability to run applications on cloud. It helps in moving from host-centric infrastructure to container-centric infrastructure.
+
+Kubernetes - Cluster Architecture
+----------------------------------
+Kubernetes follows client-server architecture.
+we have master installed on one machine and the node on separate Linux machines.
+
+Kubernetes - Master Machine Components
+----------------------------------------
+
+etcd
+----
+stores the configuration information can be used by each node in the clusters
+ It is a high availability key value store that can be distributed among multiple nodes.
+ 
+ API Server
+ -----------
+ 
+ which provides all the operation on cluster 
+ 
+ API server implements an interface, which means different tools and libraries can readily communicate with it.
+ Kubeconfig is a package along with the server side tools that can be used for communication
+ 
+ Controller Manager
+ -------------------
+  responsible for most of the collectors that regulates the state of cluster and performs a task.
+  
+ Scheduler
+ ---------
+ key components of Kubernetes master.
+ The scheduler is responsible for workload utilization and allocating pod to new node.
+ 
+Kubernetes - Node Components
+-----------------------------
+Docker
+-------
+Docker which helps in running the encapsulated application containers in a relatively isolated but lightweight operating environment.
+
+Kubelet Service
+----------------
+esponsible for relaying information to and from control plane services
+interacts with etcd store to read configuration details and wright values.
+The kubelet process then assumes responsibility for maintaining the state of work and the node server.
+
+Kubernetes Proxy Service
+-------------------------
+This is a proxy service which runs on each node and helps in making services available to the external host. 

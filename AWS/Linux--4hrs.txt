@@ -1,0 +1,150 @@
+components of Linux Os
+
+boot loader
+kernel
+init system
+daemons
+graphical server
+desktop environment
+applications
+
+linux in devops
+ faster dev on linux
+ open source
+ flexible 
+ scalabale
+ 
+ basic linux commands
+ ---------------------
+ ls--list filed
+ cd--chng dir
+ sudo or su--chnge as root user
+ mv-- move or rename the file
+ rm--  remove files frm dir
+ rm -r  --remove all the content from files
+ mkdir --make dir
+ chmod --chnge mode to read/write/execute
+ chown--chng ownership
+ cat --view contents of file
+ echo --display the text 
+ clear --clear the scrn
+ opt-get  package manger to instll/update
+ history-- to view history
+ 
+ Introduction to devops
+ -----------------------
+ traditional dev system
+ 
+ waterfall
+ ---------
+ linear and sequential approach
+ 
+ 
+ requirement analysis --system design-- implementation--testing--deployment--maintenance
+ 
+ pros
+ ----
+ easy to use
+ cost effe
+ 
+ dis
+ ---
+ risky
+ not suitable for large
+ 
+ Agile
+ -----
+ product backlog --spring planning --sprint backlog --sprint review --restrospective
+ 
+ version control system
+ -----------------------
+ git config --global user.name "jyothi"
+ git config --global user.email mandha.jyothi@gmail.com
+ 
+ git init
+ git clone
+ git status
+ 
+ git add filename
+ git add diectriryname
+ git rm filename
+ git commit -m "message"
+ git pull
+ git push origin barncha name
+ git push -all
+ 
+ 
+ continuous integration
+ ----------------------
+ 
+ ci/ci tools --jenkins
+ teamcity
+ circleci
+ gitlab
+ 
+ automated build test deploy the packages
+ 
+ jenkins
+ -------
+ open source tools
+ -free costeffective
+ easy to use
+ very rich pluggins
+ 
+ build --deploy
+ 
+ java based applications
+ 
+ java --version
+ 
+ wget -q -O https://pcg.jenkins.io/debain/jenkins.io.key | sudo apt-key add -
+ 
+ sudo sh -c 'echo deb http://pkg.jenkins.io/debain-stable binary/ > /etc/apt/sources.list.d/jenkins.list' --to add the repository to ur system
+ 
+ sudo apt-get update --update all pcg
+ sudo apt-get install jenkins --install jenkins
+ 
+ sudo service jenkins status
+ sudo systemctl start jenkins
+
+localhost 8080 in web browser
+
+password
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+paste pwd
+
+install suggested plugins
+
+Git and Maven
+
+manage jenkins
+manage plugins
+global tool configuration
+maven integration in available
+git plugin
+
+mvn -version
+
+global tool confi
+add jdk
+
+add maven
+add git
+
+
+jobs
+
+pollSCM
+--
+checking version control server
+
+webhook
+--
+build periodically
+
+scheduling jobs
+---
+
+ 

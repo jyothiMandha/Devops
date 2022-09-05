@@ -33,4 +33,4 @@ Amazon aurora
 
 
 
-aurora.cluster-cq0nmn881vpk.us-west-2.rds.amazonaws.com
+aawss
