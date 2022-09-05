@@ -1,0 +1,87 @@
+docker-compose -f docker-compose.json up
+
+docker run -t -i command name
+
+docker ps -a  // all docker containers running status and exited containers
+
+docker stop CONTAINER_ID
+
+docker restart CONTAINER_ID
+
+‘docker run –cidfile FILE_NAME’
+
+docker rm -f  = docker stop+docker rm’
+
+$ docker version --cient and server versions
+
+$ docker info  --detail info of the docker
+
+$ docker --help
+
+$ docker login  -- login to docker hub
+
+$ docker pull <image_name>
+
+$ docker run -it -d <image_name>
+
+$ docker ps --list of all running containers
+
+$ docker exec -it <container id> bash
+
+$ docker start <container_id>  --to start
+
+$ docker stop <container_id> --t ostop the container
+
+$ docker kill <container_id> --to kill
+
+$ docker commit <conatainer id> <username/imagename>  -- to edit and update the container
+
+$ docker push <username/image name>
+
+$ docker rm <container id> -- delete the stopped container
+
+$ docker rmi <image-id>  --to delete the image from local system
+
+$ docker build <path to docker file>
+
+$ docker system prune --used to remove all the stopped containers, all the networks that are not used, all dangling images and all build caches. 
+
+$ docker-compose -f docker-compose.json up --use json instead of yaml for docker compose
+ 
+
+
+
+Native Hypervisor
+Hosted Hypervisor.
+
+Docker Architecture?
+A server
+A REST API 
+
+CLI
+
+Docker Compose.
+is a YAML file which contains details about the services, networks, and volumes for setting up the Docker application.
+
+
+Docker Swarm is native clustering for Docker. It turns a pool of Docker hosts into a single, virtual Docker host.
+
+A namespace is one of the Linux features and an important concept of containers. Namespace adds a layer of isolation in containers. 
+Docker provides various namespaces in order to stay portable and not affect the underlying host system
+Few namespace types supported by Docker – PID, Mount, IPC, User, Network
+
+
+Docker machine is a tool that lets you install Docker Engine on virtual hosts.
+
+
+The common instruction in Dockerfile are: FROM, LABEL, RUN, and CMD.
+
+ /var/lib/docker/volumes -- docker volumes are stored
+ 
+ 
+ FROM ubuntu 
+MAINTAINER demousr@gmail.com 
+
+RUN apt-get update 
+RUN apt-get install –y nginx 
+CMD [“echo”,”Image created”] 

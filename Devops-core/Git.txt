@@ -120,7 +120,30 @@ Which of the following statements is correct about the git directory content?
 A:It contains all metadata that Git needs to function
 
 
+GITHUB
+-------
 
+Local repo--master
+remote repo --origin
+
+Fork --latest snapshots
+
+git remote add origin https://github.com/jyothiMandha/Devops.git
+
+git init
+git add .
+git commit -m "msg"
+git push origin master
+
+
+creating a repo using SSH
+----------------------------
+ssh-keygen
+
+password: --
+ genertae  publi and private keygen
+
+/c/Users/Mandha Jyothi/.ssh/id_rsa.pub
 
 
 

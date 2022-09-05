@@ -1,0 +1,162 @@
+To redeem courses
+------------------
+
+https://www.koenig-solutions.com/login
+
+pwd:128704
+
+Aws account root user
+----------------------
+why root credentials are not used?
+A:having extreme acess, having the chance of destroy the environemnt
+
+IAM
+---
+create groups, users, roles
+--grant permission to users
+
+access resources
+---------------
+username and pwd --authentication (access from urservices)
+access keys(Policies) --autherization  (access your require from CLI)
+
+4-principles of aws
+------------
+1.IAM user
+
+2.IAM role(role cannot have any credentials, A user can assume the role and giving temporary permissions)
+
+3.IAM service
+
+4.Identity provider(IDP) for federated user(on-premise user)
+
+programetic access
+-------------------
+access key id
+secret access key
+
+1.aws cli
+ aws configure
+
+2.aws sdk
+ creating frontend
+and connect api to aws resources
+
+setting permissions
+--------------------
+provide granually
+
+aws sts--simple token service, it provides temporary tokens
+
+acess resources from one account to another account
+--------------------------------------
+demo
+
+security policies
+------------------
+1.grant permissions
+  a.identity based policies(user/group/roles)(aws managed/customer managed)
+  
+  b.resource based policies (inline)
+  
+  inline policies are directly attached to user
+  
+ 
+ 
+ Networking
+ -----------
+
+ip adress
+2-types
+
+IPv4
+ipv6
+
+CIDR
+----
+
+10.22.0.0  /16
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

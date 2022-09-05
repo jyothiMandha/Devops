@@ -318,6 +318,15 @@ restart jenkins
 forced- -(Jenkins_url)/restart
 safe -- (Jenkins_url)/saferestart
 
+rolebased authorization strategy
+---------------------------------
+install plugin
+
+
+go to global security
+enable eole based stargety
+
+
 
 
 

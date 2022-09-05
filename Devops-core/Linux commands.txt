@@ -1,0 +1,95 @@
+Linux
+------
+whoami
+touch a.txt -- to create a file
+ls
+pwd
+mkdir tws
+cd -   fpr one step back
+mv ../merofile.txt .  -- moving file merofile.txt to present working directory
+
+nano  --open and window
+
+nano merifile.txt  --opens window / enter the content /yes/quit
+
+echo "hello world"
+history
+ls -la
+
+SSH
+----
+onse server to another server we need pem file.
+
+sudo ssh -i "default.pem" ec2-user@ec2-3-17-204-64.us-east-2.compute.amazonaws.com
+
+sudo apt get update
+
+man ls
+man ssh
+
+mkdir newfolder
+cp TWS/merifile.txt newfolder/   --copy files from one folder to another file
+
+scp
+---
+touch from_local.txt
+vi from_local.txt
+
+sudo scp -i tws-key.pem  ubuntu/new.merifile.txt .
+
+
+esc 
+:wq
+
+
+Shell scripting
+-----------------
+mkdir scripts
+cd scripts
+echo "hello"
+Bash --bourne again shell
+which bash 
+nano devops-first.sh
+  --notepad opens
+  
+    #!/bin/bash
+	echo "i will be a great Devops Engineer"
+	
+	ctrl+x
+	yes
+	yes
+	
+bash devops-first.sh ---To run bash script
+
+./devops-first.sh
+
+ls -l  -->to check how many permissions are there
+
+chmod 777 devops-first.sh
+ls -l
+
+./devops-first.sh
+
+nano devops-first.sh
+ 
+  echo $BASH
+  name="Jyo"echo "hello${name}"
+  ctrl+X
+  yes
+  yes
+  
+  o/p: hello jyo
+  
+# --means comment
+
+user input / Arguments
+-----------------------
+echo "hello ${name} , please enter age"
+
+read age
+
+echo "My age is $age"
+
+  
+	
+

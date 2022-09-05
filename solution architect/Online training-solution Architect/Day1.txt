@@ -1,0 +1,100 @@
+Architecting on AWS
+--------------------
+
+1.architecting fundamentals
+Lab1
+2.account security
+3.networking
+4.compute resources
+lab2
+5.storage
+6.Database services
+Lab3
+7.Monitoring and scaling
+Lab4
+8.Automation
+9.Containers
+10.Networking2
+11.Serverless
+Lab5
+12.Edge Services
+Lab6
+13.Backup and Recovery
+Lab7
+
+---------------------------------------
+Module1
+-------
+AWS services
+-------------
+Benifits of AWS services?
+200+ services
+cost opti
+increase innovation
+scaling
+reduce security vulnerabilities
+reduce management complexity
+
+**outpost
+
+Disadv
+-------
+our data is storing in another org/servers
+
+AWs Infrastructure
+---------------------
+Data centers --- collection of servers
+
+Avalability zones-- having one or more Data Centers
+
+regions-- geographical location/ boundary (3-availabilty zones atleast)
+
+Selecting regions
+------------------
+compliance
+availabilty of feature/services
+Price
+Latency
+
+Aws Local zones
+---------------
+26 --regions
+84-- Az
+consistent aws experience
+
+edge Locations
+---------------
+caching Points 
+faster delivery
+
+Architect responsibilities
+--------------------------
+Plan
+Research
+Build
+
+6-pillars
+
+securitycost 
+optimization
+reliability
+performance efficiency
+operational excellence
+Sustainability
+
+https://us-east-1.mango.aws.training/class/7L1avBgmQbqBQuREJnzmUA?accessCode=4WYcyjDsdJdCM1Jw4rQheF
+
+ec2 to s3
+----------
+aws s3 ls
+aws s3 mb s3://labclibucket-NUMBER
+
+
+aws s3 cp /home/ssm-user/samplefile.jpg s3://labbucket100
+
+aws s3 ls s3://labclibucket-NUMBER- -- to get list
+
+
+
+
+

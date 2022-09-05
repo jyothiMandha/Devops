@@ -1,0 +1,36 @@
+AWS compute optmizer
+--------------------
+
+capturing historical data and gives the suggestions/ recommendations
+
+Amazon ec2 key pairs
+---------------------
+
+storage
+--------
+s3
+
+WORM
+unlimited
+serverless
+low cost
+
+Access point
+------------
+
+
+Databases
+----------
+
+AWS KMS
+-------
+envelop encryption
+
+Amazon aurora
+--------------
+5x ---mysql
+3x --postgreSQL
+
+
+
+aurora.cluster-cq0nmn881vpk.us-west-2.rds.amazonaws.com
