@@ -1,0 +1,61 @@
+Java
+----
+
+Programming Fundamentals 
+OOPS
+Collections
+
+ADV Java
+--------
+Spring Technologies
+Hibernate
+
+
+Front-End-Developer
+-------------------
+HTML
+CSS
+Javascript
+Angular
+
+Database
+--------
+MySQL
+ORACLE
+JDBC Basics
+
+Server
+------
+Tomcat
+
+VersionControlSystem(VCS)
+-------------------------
+GIT
+GITHUB
+
+Integration
+-----------
+Jenkins
+
+Build tool
+----------
+Maven
+
+APIS
+----
+Postman
+Swagger
+SoapUI
+
+
+Orchestration Tools
+-------------------
+Docker
+K8
+Helm Chart
+
+Cloud Flatform
+--------------
+AWS
+
+
