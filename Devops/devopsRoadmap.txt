@@ -1,0 +1,23 @@
+Git --
+Server -- 
+build tools like maven gradle
+ci -- jenkins
+cd ---
+
+AWS
+Azure
+google cloud
+
+docker swarm
+kubernetes
+
+monitoring --prometheus , nagios
+
+iaas-- ansible, cheff, terraform
+
+scripting language --bash, python , ruby, go , shellscript
+
+version control --github
+
+
+
