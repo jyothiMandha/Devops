@@ -22,7 +22,7 @@ Lab6
 13.Backup and Recovery
 Lab7
 
----------------------------------------
+---------------------------
 Module1
 -------
 AWS services
@@ -85,9 +85,10 @@ Sustainability
 https://us-east-1.mango.aws.training/class/7L1avBgmQbqBQuREJnzmUA?accessCode=4WYcyjDsdJdCM1Jw4rQheF
 
 ec2 to s3
-----------
+---------
 aws s3 ls
 aws s3 mb s3://labclibucket-NUMBER
+
 
 
 aws s3 cp /home/ssm-user/samplefile.jpg s3://labbucket100

@@ -44,7 +44,7 @@ development happens in step by step manner
 
 Agile Model
 ------------
-entire building a software broken down into small actionable blovks called Sprints
+entire building a software broken down into small actionable blocks called Sprints
 
 plan
 code
@@ -85,7 +85,7 @@ provides a shared integrated place to all the people from build and test environ
 
 that enables the developers to merge code changes to central repository
 
-avoids murge conflicts
+avoids merge conflicts
 decrease code review
 speeds up development process
 reduces product backlog
@@ -103,7 +103,7 @@ customer are more satisfied
 more efficiency and cost effectiveness 
 
 
-contimuous deployment
+continuous deployment
 ----------------------
 deploy to production
 
@@ -325,6 +325,17 @@ install plugin
 
 go to global security
 enable eole based stargety
+
+-----
+
+manage jenkins
+manage and assign roles
+
+manage roles---
+
+create a role developer
+select the permissions
+
 
 
 

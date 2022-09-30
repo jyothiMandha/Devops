@@ -5,7 +5,7 @@ touch a.txt -- to create a file
 ls
 pwd
 mkdir tws
-cd -   fpr one step back
+cd -   for one step back
 mv ../merofile.txt .  -- moving file merofile.txt to present working directory
 
 nano  --open and window
@@ -73,7 +73,8 @@ ls -l
 nano devops-first.sh
  
   echo $BASH
-  name="Jyo"echo "hello${name}"
+  name="Jyo"
+  echo "hello${name}"
   ctrl+X
   yes
   yes

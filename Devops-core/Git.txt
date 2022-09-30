@@ -65,7 +65,7 @@ git add
 git commit -m "message"
 
 to modify files
------------------
+----------------
 git log
 
 git log --oneliner
@@ -82,7 +82,7 @@ staging area --git diff --staged --local repo
 git diff --staged  ==  git diff --stageed HEAD
 
 Revert the commits
--------------------
+------------------
 $git log -- list details of the commit associated with afile
 git checkout  --stage the file
 git status --share the command to unstage the file
@@ -97,12 +97,12 @@ git status
 git rm --cached b.txt
 
 ignoring files in git
-------------------------
+-----------------------
 
 echo "mofify a.txt"  >> a.txtecho
 
 rename
--------
+------
 
 .git/indexfile
 

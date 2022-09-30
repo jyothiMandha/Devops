@@ -1,5 +1,11 @@
 Kubernetes
 -----------
+An API object that manages external access to the services in a cluster, typically HTTP.
+
+Ingress may provide load balancing, SSL termination and name-based virtual hosting.
+
+Ter
+
 how to deploy, use, maintain in cluster
 
 Origin of k8
@@ -94,7 +100,7 @@ Node-- they are worker machines that run containerized applications
 
 Pod-- it is a groupof containers that are deployed together on the same host
 
-replication contollers-- it is used to definr pod lifecycles, rather than to create pods directly
+replication contollers-- it is used to define pod lifecycles, rather than to create pods directly
 
 Selector--expression matches lables to filter specific resources
 
@@ -110,7 +116,9 @@ Volume--directory with data which is accessible to a containerized
 
 NAmespace--provides additinal qualifictn to a resource name
 
-Service==abstarction on top of pods, provides single ip address abd DNS name by which pods are accessed
+Service==abstarction on top of pods, provides single ip address and DNS name by which pods are accessed
+
+Edge router: A router that enforces the firewall policy for your cluster. This could be a gateway managed by a cloud provider or a physical piece of hardware.
 
 Architecture
 ------------
@@ -122,7 +130,7 @@ master
  
 slave
 Node 
-  3-tcomponents
+  3-components
   docker 
   kubelet
   k8 proxy
@@ -245,7 +253,11 @@ open-sourcescaling
 servicesself-monitoring
 
 
-4..
+4..The minkube can be defined as the tool that helps to run Kubernetes in a localized manner or locally. This in return leads to running Kubernetes in a virtual machine.
+
+The kubectl can be defined as a platform that can be used to pass the commands to the cluster. In other words, it delivers commands to the CLI to run against the Kubernetes clusters.
+
+The Kube-proxy is a component of worker nodes. The Kube-proxy goes through each node and runs in them. It helps in TCP/UDP packet forwarding transversely back-end network services.
 
 
 
